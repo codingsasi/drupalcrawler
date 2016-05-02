@@ -16,8 +16,8 @@ NEWSPIDER_MODULE = 'drupalcrawler.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'drupalcrawler (+http://www.yourdomain.com)'
-
+USER_AGENT = 'drupalcrawler (+http://www.guthanguran.club)'
+DOWNLOAD_DELAY = 10
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 

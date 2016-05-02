@@ -12,11 +12,11 @@ class DrupalcrawlerItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass
-
+""" Todo
 class ProjectSupported(scrapy.Item):
     name = scrapy.Field()
     link = scrapy.Field()
-
+"""
 class CreditedIssue(scrapy.Item):
     name = scrapy.Field()
     link = scrapy.Field()
@@ -42,5 +42,5 @@ class Company(scrapy.Item):
     locations = scrapy.Field()
     head_quarters = scrapy.Field()
     usual_budget = scrapy.Field()
-    projects_supported = scrapy.Field()
+    #projects_supported = scrapy.Field()
     credited_issues = scrapy.Field()
