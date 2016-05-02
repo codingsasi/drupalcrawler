@@ -6,7 +6,7 @@ class DrupalCompanySpider(scrapy.Spider):
     name = 'drupalcompanies'
     allowed_domains = ['www.drupal.org', 'drupal.org']
     start_urls = [
-         "http://stackoverflow.com/questions?pagesize=50&sort=newest",
+        "https://www.drupal.org/zyxware-technologies",
     ]
 
     def parse(self, response):
