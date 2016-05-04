@@ -5,13 +5,12 @@ from drupalcrawler.items import Service, Sector, Location, Company, CreditedIssu
 class DrupalCompanySpider(scrapy.Spider):
     name = 'drupalcompanies'
     allowed_domains = ['www.drupal.org', 'drupal.org']
+
     start_urls = []
     with open(os.getcwd() + '/start_urls.csv') as f:
         for url in f.readlines():
             start_urls.append(url.rstrip())
-        
-    print start_urls
-    print type(start_urls)
+
     def parse(self, response):
         company = Company()
         company['name'] = response.css('h1::text').extract_first()
@@ -22,6 +21,8 @@ class DrupalCompanySpider(scrapy.Spider):
         locations = []
         all_details = []
         credited_issues = []
+        head_quarters = ""
+        usual_budget = ""
 
         """
         Serializing all the details of the company, if it exists
